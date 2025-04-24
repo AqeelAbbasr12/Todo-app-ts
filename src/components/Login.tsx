@@ -4,7 +4,7 @@ import Input from './Input';
 import Button from './Button';
 
 function LoginComponent() {
-  return <div className="h-screen w-screen bg-rose-400 flex justify-center items-center">
+  return <div className="h-screen w-screen bg-[#FF6767] flex justify-center items-center">
     <div className="bg-white w-10/12 h-10/12 rounded-md">
       <div className="grid grid-cols-5 h-full">
         <div className='col-span-5 md:col-span-3 w-9/12 flex flex-col justify-center gap-3 p-2 mx-auto'>

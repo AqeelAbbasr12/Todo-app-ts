@@ -4,7 +4,7 @@ import Input from './Input';
 import Button from './Button';
 
 function RegisterComponent() {
-  return <div className="h-screen w-screen bg-rose-400 flex justify-center items-center">
+  return <div className="h-screen w-screen bg-[#FF6767] flex justify-center items-center">
     <div className="bg-white w-10/12 h-10/12 rounded-md">
       <div className="grid grid-cols-5 h-full">
         <div className='hidden col-span-2 w-full h-full md:flex justify-start items-end'>
