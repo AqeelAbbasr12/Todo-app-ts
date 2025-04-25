@@ -47,7 +47,8 @@ function Sidebar() {
   const [activeItem, setActiveItem] = useState("Dashboard");
 
   return (
-    <div className="h-[calc(100vh-100px)] w-80 bg-[#FF6767] rounded-r-xl flex flex-col justify-between">
+    // h - [calc(100vh - 100px)]
+    <div className="w-80 bg-[#FF6767] rounded-r-xl flex flex-col justify-between">
       <div>
         <div className="flex justify-center items-center flex-col gap-y-4">
           <Avatar size="lg" className="" rounded={true} imgUrl={Profile2} alt="react icon" />
@@ -88,7 +89,7 @@ function SidebarItems({ activeItem, setActiveItem }: SidebarItemsProps) {
           <div
             key={name}
             onClick={() => setActiveItem(name)}
-            className={`h-[60px] cursor-pointer flex justify-start items-center rounded-lg gap-4 p-4 ${isActive ? "bg-white" : "bg-[#FF6767]"
+            className={`h-[60px] cursor-pointer flex justify-start items-center rounded-lg gap-4 p-2 lg:p-4 ${isActive ? "bg-white" : "bg-[#FF6767]"
               }`}
           >
             <Icon color={isActive ? "#FF6767" : "#ffffff"} />
