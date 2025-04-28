@@ -17,7 +17,7 @@ function Thumbnail({ size = "md", className, alt = "img", imgUrl }: thumbnailPro
   const sizeClass = avatarSizes[size];
 
   return <div className={`${className} rounded-xl ${sizeClass}`}>
-    <img src={imgUrl} alt={alt} className={`h-full rounded-xl `} />
+    <img src={imgUrl} alt={alt} className={`w-full h-full object-cover rounded-xl `} />
   </div>
 }
 

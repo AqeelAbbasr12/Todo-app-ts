@@ -15,12 +15,18 @@ const avatarSizes = {
 };
 
 
-function Avatar({ size = "sm", rounded, className, alt = "img", imgUrl }: avatarProps) {
+function Avatar({ size = "sm", rounded, className = "", alt = "img", imgUrl }: avatarProps) {
   const sizeClass = avatarSizes[size];
 
-  return <div className={`${className} ${rounded && "rounded-full"} ${sizeClass}`}>
-    <img src={imgUrl} alt={alt} className={`${rounded && "rounded-full"} h-full`} />
-  </div>
+  return (
+    <div className={`${className} ${rounded ? "rounded-full" : ""} ${sizeClass} overflow-hidden`}>
+      <img
+        src={imgUrl}
+        alt={alt}
+        className={`w-full h-full object-cover ${rounded ? "rounded-full" : ""}`}
+      />
+    </div>
+  );
 }
 
 export default Avatar;
