@@ -42,34 +42,39 @@ const menuItems = [
   },
 ];
 
+type sidebarProps = {
+  className: string
+}
 
-function Sidebar() {
+
+function Sidebar({ className }: sidebarProps) {
   const [activeItem, setActiveItem] = useState("Dashboard");
 
   return (
-    // h - [calc(100vh - 100px)]
-    <div className="w-80 bg-[#FF6767] rounded-r-xl flex flex-col justify-between">
-      <div>
-        <div className="flex justify-center items-center flex-col gap-y-4">
-          <Avatar size="lg" className="" rounded={true} imgUrl={Profile2} alt="react icon" />
-          <div className="text-white text-center">
-            <p className="text-[16px] font-semibold">Sundar Gurung</p>
-            <p className="text-[12px] font-normal">sundargurung360@gmail.com</p>
+    <div className={`${className} hidden lg:block`}>
+      <div className={`w-80 md:w-60 lg:w-68 xl:w-80 bg-[#FF6767] rounded-r-xl flex flex-col justify-between`}>
+        <div>
+          <div className="flex justify-center items-center flex-col gap-y-4">
+            <Avatar size="lg" className="" rounded={true} imgUrl={Profile2} alt="react icon" />
+            <div className="text-white text-center">
+              <p className="text-[16px] font-semibold">Sundar Gurung</p>
+              <p className="text-[12px] font-normal">sundargurung360@gmail.com</p>
+            </div>
+          </div>
+
+
+          <div className="p-5">
+            <SidebarItems
+              activeItem={activeItem}
+              setActiveItem={setActiveItem}
+            />
           </div>
         </div>
 
-
-        <div className="p-5">
-          <SidebarItems
-            activeItem={activeItem}
-            setActiveItem={setActiveItem}
-          />
+        <div className="h-[60px] flex justify-start items-center rounded-lg gap-4 p-4 m-5 cursor-pointer">
+          <Icon name="logout" />
+          <p className="font-medium text-[16px] text-white">Logout</p>
         </div>
-      </div>
-
-      <div className="h-[60px] flex justify-start items-center rounded-lg gap-4 p-4 m-5 cursor-pointer">
-        <Icon name="logout" />
-        <p className="font-medium text-[16px] text-white">Logout</p>
       </div>
     </div>
   );
