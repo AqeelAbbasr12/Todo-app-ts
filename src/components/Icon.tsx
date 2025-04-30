@@ -13,10 +13,12 @@ import Pending from '../assets/icons/pending.svg';
 import Plus from '../assets/icons/plus.svg';
 import TaskStatus from '../assets/icons/task-status.svg';
 import TaskCompleted from '../assets/icons/task-completed.svg';
+import Delete from '../assets/icons/delete.svg';
+import Edit from '../assets/icons/edit.svg';
 
 export type IconName = 'mail' | 'password' | 'confirmPassword' | "user" | 'firstName'
   | 'lastName' | 'search' | "bell" | "calender"
-  | "logout" | "menu" | "pending" | "plus" | "taskStatus" | "taskCompleted";
+  | "logout" | "menu" | "pending" | "plus" | "taskStatus" | "taskCompleted" | "delete" | "edit";
 
 const icons: Record<IconName, string> = {
   mail: Mail,
@@ -34,6 +36,8 @@ const icons: Record<IconName, string> = {
   plus: Plus,
   taskStatus: TaskStatus,
   taskCompleted: TaskCompleted,
+  edit: Edit,
+  delete: Delete
 };
 
 

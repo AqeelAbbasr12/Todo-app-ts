@@ -3,8 +3,11 @@ import StatusDotIcon from "../components/Icons/StatusDot";
 import TodoItem from "../components/TodoItem";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import Modal from "../components/Modal";
+import { useState } from "react";
 
 function Dashboard() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const percentage = 66;
   return <div className="dashboard">
     <div>
@@ -21,7 +24,7 @@ function Dashboard() {
           </div>
           <div className="flex itmes-center gap-1 cursor-pointer">
             <Icon name="plus" />
-            <span className="text-[15px] text-[#A1A3AB] font-medium"> Add Task </span>
+            <span className="text-[15px] text-[#A1A3AB] font-medium" onClick={() => setIsModalOpen(true)}> Add Task </span>
           </div>
         </div>
         <div className="flex gap-3 text-[#12px] font-normal">
@@ -114,6 +117,17 @@ function Dashboard() {
         </div>
       </div>
     </div>
+
+    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className="h-[calc(100vh-400px)]">
+      <h2 className="text-xl font-semibold mb-4">This is a Modal</h2>
+      <p className="text-gray-700 mb-4">Add task content will display here!</p>
+      <button
+        onClick={() => setIsModalOpen(false)}
+        className="bg-red-500 text-white px-3 py-1 rounded"
+      >
+        Close
+      </button>
+    </Modal>
   </div>
 }
 
