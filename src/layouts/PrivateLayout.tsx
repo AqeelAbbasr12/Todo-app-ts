@@ -8,16 +8,17 @@ import Sidebar from "../components/Sidebar";
 
 const PrivateLayout = () => {
   return (
-    <div className="h-screen flex justify-center items-center bg-[url(@/assets/images/bg-private.png)] bg-no-repeat bg-center bg-cover">
-      <div className="md:w-11/12 lg:w-10/12">
-        <Topbar />
-        <div className="flex w-full h-fulll bg-white">
-          <Sidebar className="abso" />
-          <div className="w-full h-fulll py-6 ">
-            <div className="w-11/12 mx-auto h-fulll rounded-xl p-6">
-              <Outlet />
-            </div>
-          </div>
+    <div className="h-screen w-screen bg-[url(@/assets/images/bg-private.png)] bg-cover bg-no-repeat bg-center flex justify-center items-center p-4">
+      <div className="relative w-full max-w-[1400px] h-full bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <div className="">
+          <Topbar />
+          {/* <div className="w-full h-16 bg-slate-200"></div> */}
+        </div>
+        <div className="flex flex-1 overflow-hidden">
+          <Sidebar />
+          <main className="flex-1 overflow-y-auto p-6">
+            <Outlet />
+          </main>
         </div>
       </div>
     </div>

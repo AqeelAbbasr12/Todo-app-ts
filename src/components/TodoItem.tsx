@@ -1,5 +1,5 @@
 import Thumbnail from "./Thumbnail";
-import Profile2 from "@/assets/images/profile2.jpg"
+import Profile3 from "@/assets/images/profile3.jpg"
 import RingIcon from "./Icons/Ring";
 import Icon from "./Icon";
 
@@ -19,7 +19,7 @@ function TodoItem() {
           </p>
         </div>
         <div>
-          <Thumbnail size="md" imgUrl={Profile2} alt="thumbnail" />
+          <Thumbnail size="md" imgUrl={Profile3} alt="thumbnail" />
         </div>
       </div>
       <div className="flex justify-between mt-2">

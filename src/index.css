@@ -2,6 +2,10 @@
 
 @tailwind utilities;
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 @layer utilities {
   .line-clamp-2 {
     display: -webkit-box;

@@ -1,4 +1,3 @@
-// Modal.tsx
 import React from "react";
 
 interface ModalProps {
@@ -16,7 +15,7 @@ function Modal({ isOpen, onClose, className, children }: ModalProps) {
   };
 
   const handleContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent click from reaching the overlay
+    e.stopPropagation();
   };
 
   return (

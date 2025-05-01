@@ -1,4 +1,3 @@
-
 type avatarProps = {
   size: "xl" | "lg" | "md" | "sm"
   imgUrl: string
@@ -13,7 +12,6 @@ const avatarSizes = {
   lg: 'h-[86px] w-[86px] border-[1px] border-white',
   xl: 'h-[100px] w-[100px]'
 };
-
 
 function Avatar({ size = "sm", rounded, className = "", alt = "img", imgUrl }: avatarProps) {
   const sizeClass = avatarSizes[size];

@@ -13,8 +13,10 @@ function MyTasks() {
   return <div className="grid grid-cols-12 gap-2 h-full">
     <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[600px] overflow-auto w-full gap-2 px-5 py-4" style={container}>
       <h2 className="text-[16px] font-semibold mb-2">My Tasks</h2>
-      <TodoItem />
-      <TodoItem />
+      <div className="flex flex-col">
+        <TodoItem />
+        <TodoItem />
+      </div>
     </div>
     <div className="col-span-12 md:col-span-6  lg:col-span-7 h-full w-full px-5 py-4" style={container}>
       <div className="flex justify-start items-end gap-2 mb-5">

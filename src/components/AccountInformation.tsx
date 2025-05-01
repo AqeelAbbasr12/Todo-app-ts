@@ -1,5 +1,5 @@
 import Avatar from "./Avatar";
-import Profile2 from "@/assets/images/profile2.jpg"
+import Profile3 from "@/assets/images/profile3.jpg"
 import Input from "./Input";
 import Button from "./Button";
 import SectionHeader from "./SectionHeader";
@@ -10,7 +10,7 @@ function AccountInformation() {
       <SectionHeader text="Account Information" />
     </div>
     <div className="flex items-center gap-4 mb-6">
-      <Avatar size="xl" imgUrl={Profile2} className="" rounded />
+      <Avatar size="xl" imgUrl={Profile3} className="" rounded />
       <div>
         <div className="text-[20px] font-semibold">Sundar Gurung</div>
         <div className="text-[15px] font-normal">sundargurung360@gmail.com</div>

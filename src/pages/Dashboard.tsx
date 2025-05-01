@@ -16,7 +16,8 @@ function Dashboard() {
       </div>
     </div>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="list-container p-8 rounded-2xl flex flex-col gap-2 overflow-auto">
+      {/* this is list of tasks container */}
+      <div className="list-container p-8 rounded-2xl flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-250px)]">
         <div className="flex justify-between items-center">
           <div className="flex itmes-center">
             <Icon name="pending" className="h-8 w-7" />
@@ -31,9 +32,11 @@ function Dashboard() {
           <span>20 June</span>
           <span className="text-[#A1A3AB]">Today</span>
         </div>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <div className="flex flex-col gap-2 h-full overflow-y-auto">
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
+        </div>
       </div>
       <div>
         <div className="list-container p-8 rounded-2xl flex flex-col gap-2">
@@ -107,13 +110,22 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="list-container p-8 rounded-2xl flex flex-col gap-2 overflow-auto">
+        {/* this is completed tasks container */}
+        <div className="list-container p-8 rounded-2xl flex flex-col gap-2 overflow-y-auto max-h-[430px]">
           <div className="flex itmes-center gap-2 mb-2">
             <Icon name="taskCompleted" className="h-6 w-5.5" />
             <span className="text-[15px] text-[#FF6767] font-medium">Completed Task</span>
           </div>
-          <TodoItem />
-          <TodoItem />
+          <div className="flex flex-col gap-2 overflow-y-auto">
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+            <TodoItem />
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import Avatar from "./Avatar";
-import Profile2 from "../assets/images/profile2.jpg"
+import Profile3 from "../assets/images/profile3.jpg"
 import DashboardIcon from "./Icons/dashboard";
 import SettingsIcon from "./Icons/settingsIcon";
 import TaskManagementIcon from "./Icons/TaskManagementIcon";
@@ -42,39 +42,26 @@ const menuItems = [
   },
 ];
 
-type sidebarProps = {
-  className: string
-}
 
-
-function Sidebar({ className }: sidebarProps) {
+function Sidebar() {
   const [activeItem, setActiveItem] = useState("Dashboard");
 
   return (
-    <div className={`${className} hidden lg:block`}>
-      <div className={`w-80 md:w-60 lg:w-68 xl:w-80 bg-[#FF6767] rounded-r-xl flex flex-col justify-between`}>
-        <div>
-          <div className="flex justify-center items-center flex-col gap-y-4">
-            <Avatar size="lg" className="" rounded={true} imgUrl={Profile2} alt="react icon" />
-            <div className="text-white text-center">
-              <p className="text-[16px] font-semibold">Sundar Gurung</p>
-              <p className="text-[12px] font-normal">sundargurung360@gmail.com</p>
-            </div>
-          </div>
+    <div className="hidden lg:flex flex-col justify-between w-64 bg-[#FF6767] rounded-r-2xl py-6 px-4 mt-12">
+      <div className="flex flex-col items-center gap-4">
+        <div className="-mt-16 absolute">
 
-
-          <div className="p-5">
-            <SidebarItems
-              activeItem={activeItem}
-              setActiveItem={setActiveItem}
-            />
-          </div>
+          <Avatar size="lg" rounded imgUrl={Profile3} className="" alt="User profile" />
         </div>
-
-        <div className="h-[60px] flex justify-start items-center rounded-lg gap-4 p-4 m-5 cursor-pointer">
-          <Icon name="logout" />
-          <p className="font-medium text-[16px] text-white">Logout</p>
+        <div className="text-white text-center mt-12">
+          <p className="text-[16px] font-semibold">Sundar Gurung</p>
+          <p className="text-[12px] font-normal">sundargurung360@gmail.com</p>
         </div>
+        <SidebarItems activeItem={activeItem} setActiveItem={setActiveItem} />
+      </div>
+      <div className="flex items-center gap-3 text-white cursor-pointer p-4 hover:bg-white hover:text-[#FF6767] rounded-lg transition">
+        <Icon name="logout" />
+        <p className="font-medium text-[16px]">Logout</p>
       </div>
     </div>
   );
@@ -110,7 +97,5 @@ function SidebarItems({ activeItem, setActiveItem }: SidebarItemsProps) {
     </div>
   );
 }
-
-
 
 export default Sidebar;
