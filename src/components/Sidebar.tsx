@@ -8,6 +8,7 @@ import MyTaskIcon from "./Icons/MyTaskIcon";
 import HelpIcon from "./Icons/helpIcon";
 import Icon from "./Icon";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
@@ -18,27 +19,27 @@ const menuItems = [
   {
     name: "Vital Task",
     icon: Vitaltask,
-    url: "/settings",
+    url: "/vital-tasks",
   },
   {
     name: "My Task",
     icon: MyTaskIcon,
-    url: "/reports",
+    url: "/my-tasks",
   },
   {
     name: "Task Categories",
     icon: TaskManagementIcon,
-    url: "/reports",
+    url: "/categories",
   },
   {
     name: "Settings",
     icon: SettingsIcon,
-    url: "/reports",
+    url: "/settings",
   },
   {
     name: "Help",
     icon: HelpIcon,
-    url: "/reports",
+    url: "/help",
   },
 ];
 
@@ -59,10 +60,10 @@ function Sidebar() {
         </div>
         <SidebarItems activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>
-      <div className="flex items-center gap-3 text-white cursor-pointer p-4 hover:bg-white hover:text-[#FF6767] rounded-lg transition">
+      <Link to={'/'} className="flex items-center gap-3 text-white cursor-pointer p-4 hover:bg-white hover:text-[#FF6767] rounded-lg transition">
         <Icon name="logout" />
         <p className="font-medium text-[16px]">Logout</p>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -75,10 +76,11 @@ interface SidebarItemsProps {
 function SidebarItems({ activeItem, setActiveItem }: SidebarItemsProps) {
   return (
     <div className="flex flex-col gap-2">
-      {menuItems.map(({ name, icon: Icon }) => {
+      {menuItems.map(({ url, name, icon: Icon }) => {
         const isActive = activeItem === name;
         return (
-          <div
+          <Link
+            to={`${url}`}
             key={name}
             onClick={() => setActiveItem(name)}
             className={`h-[60px] cursor-pointer flex justify-start items-center rounded-lg gap-4 p-2 lg:p-4 ${isActive ? "bg-white" : "bg-[#FF6767]"
@@ -91,7 +93,7 @@ function SidebarItems({ activeItem, setActiveItem }: SidebarItemsProps) {
             >
               {name}
             </p>
-          </div>
+          </Link>
         );
       })}
     </div>

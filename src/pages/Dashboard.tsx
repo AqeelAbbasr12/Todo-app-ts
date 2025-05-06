@@ -38,8 +38,8 @@ function Dashboard() {
           <TodoItem />
         </div>
       </div>
-      <div>
-        <div className="list-container p-8 rounded-2xl flex flex-col gap-2">
+      <div className="flex flex-col gap-2 ">
+        <div className="bg-white list-container p-8 rounded-2xl flex flex-col gap-2">
           <div className="flex itmes-center gap-2 mb-2">
             <Icon name="taskStatus" className="h-6 w-5.5" />
             <span className="text-[15px] text-[#FF6767] font-medium"> Task Status </span>
@@ -111,7 +111,7 @@ function Dashboard() {
           </div>
         </div>
         {/* this is completed tasks container */}
-        <div className="list-container p-8 rounded-2xl flex flex-col gap-2 overflow-y-auto max-h-[430px]">
+        <div className="bg-white list-container p-8 rounded-2xl flex flex-col gap-2 overflow-y-auto max-h-[430px] z-50">
           <div className="flex itmes-center gap-2 mb-2">
             <Icon name="taskCompleted" className="h-6 w-5.5" />
             <span className="text-[15px] text-[#FF6767] font-medium">Completed Task</span>

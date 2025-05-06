@@ -9,7 +9,7 @@ const container = {
   borderRadius: "14px"
 }
 
-function MyTasks() {
+function VitalTasks() {
   return <div className="grid grid-cols-12 gap-2 h-full">
     <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[600px] overflow-auto w-full gap-2 px-5 py-4" style={container}>
       <h2 className="text-[16px] font-semibold mb-2">My Tasks</h2>
@@ -57,4 +57,4 @@ function MyTasks() {
   </div>
 }
 
-export default MyTasks;
+export default VitalTasks;

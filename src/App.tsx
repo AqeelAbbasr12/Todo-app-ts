@@ -8,6 +8,10 @@ import Dashboard from "./pages/Dashboard";
 import MyTasks from "./pages/MyTasks";
 import ChangePassword from "./pages/ChangePassword";
 import AccountInfo from "./pages/AccountInfo";
+import VitalTasks from "./pages/VitalTasks";
+import Settings from "./pages/Settings";
+import Help from "./pages/Help";
+import Categories from "./pages/Categories";
 
 const App = () => {
   return (
@@ -22,7 +26,11 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/account-information" element={<AccountInfo />} />
-        <Route path="/tasks" element={<MyTasks />} />
+        <Route path="/my-tasks" element={<MyTasks />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/vital-tasks" element={<VitalTasks />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/help" element={<Help />} />
       </Route>
     </Routes>
   );
