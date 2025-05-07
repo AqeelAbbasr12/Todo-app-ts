@@ -12,6 +12,7 @@ import VitalTasks from "./pages/VitalTasks";
 import Settings from "./pages/Settings";
 import Help from "./pages/Help";
 import Categories from "./pages/Categories";
+import CreateCategory from "./pages/CreateCategory";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/vital-tasks" element={<VitalTasks />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/create-category" element={<CreateCategory />} />
       </Route>
     </Routes>
   );

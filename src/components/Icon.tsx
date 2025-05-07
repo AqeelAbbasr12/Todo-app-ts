@@ -40,7 +40,6 @@ const icons: Record<IconName, string> = {
   delete: Delete
 };
 
-
 type IconProps = {
   name: IconName;
   alt?: string;
