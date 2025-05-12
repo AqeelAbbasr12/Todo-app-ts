@@ -8,15 +8,17 @@ function Categories() {
     console.log("clicked on goto")
     navigate("/create-category");
   }
-  return <div className="flex flex-col gap-4">
-    <div>
+  return <div>
+    <div className="mb-4">
       <SectionHeader text="Create Categories" />
     </div>
-    <Button text="Add Category" size="md" onClick={goto} />
-    <div>
-      <div className="flex justify-between items-center">
-        <div>Task Status</div>
-        <div>+ add</div>
+    <div className="mb-4">
+      <Button text="Add Category" size="md" onClick={goto} />
+    </div>
+    <div className="mb-8">
+      <div className="flex justify-between items-center mb-3">
+        <div className="heading font-semibold text-[15px]">Task Status</div>
+        <div className="text-normal text-[12px] text-[#A1A3AB]"><span className="text-[#F24E1E]">+</span>  Add Task Status</div>
       </div>
       <table className="rounded-table text-center">
         <thead>
@@ -56,9 +58,9 @@ function Categories() {
       </table>
     </div>
     <div>
-      <div className="flex justify-between items-center">
-        <div>Task Status</div>
-        <div>+ add </div>
+      <div className="flex justify-between items-center mb-3">
+        <div className="font-semibold text-[15px]">Task Status</div>
+        <div className="text-normal text-[12px] text-[#A1A3AB]"><span className="text-[#F24E1E]">+</span>  Add Task Status</div>
       </div>
       <table className="rounded-table text-center">
         <thead>

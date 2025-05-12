@@ -21,7 +21,7 @@ function Modal({ isOpen, onClose, className, children }: ModalProps) {
   return (
     <div className={` fixed inset-0 bg-black/50  flex justify-center items-center z-50`}
       onClick={handleOverlayClick}>
-      <div className={`${className} bg-white rounded-lg p-6 w-full max-w-md relative`}
+      <div className={`${className} bg-white rounded-lg p-6 relative`}
         onClick={handleContentClick}>
         <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 cursor-pointer">
           ✖

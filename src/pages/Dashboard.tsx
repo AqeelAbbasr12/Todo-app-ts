@@ -5,6 +5,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Modal from "../components/Modal";
 import { useState } from "react";
+import AddTask from "../components/AddTask";
 
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -110,7 +111,6 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        {/* this is completed tasks container */}
         <div className="bg-white list-container p-8 rounded-2xl flex flex-col gap-2 overflow-y-auto max-h-[430px] z-50">
           <div className="flex itmes-center gap-2 mb-2">
             <Icon name="taskCompleted" className="h-6 w-5.5" />
@@ -130,15 +130,8 @@ function Dashboard() {
       </div>
     </div>
 
-    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className="h-[calc(100vh-400px)]">
-      <h2 className="text-xl font-semibold mb-4">This is a Modal</h2>
-      <p className="text-gray-700 mb-4">Add task content will display here!</p>
-      <button
-        onClick={() => setIsModalOpen(false)}
-        className="bg-red-500 text-white px-3 py-1 rounded"
-      >
-        Close
-      </button>
+    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className=" w-10/12 md:w-7/12">
+      <AddTask />
     </Modal>
   </div>
 }

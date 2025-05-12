@@ -32,17 +32,17 @@ body {
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid red;
+  border: 1px solid #a1a3ab;
   width: 100%;
 }
 
 .rounded-table th {
-  border-bottom: 1px solid #e5e7eb;
-  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #a1a3ab;
+  border-right: 1px solid #a1a3ab;
   padding: 0.5rem;
 }
 .rounded-table td {
-  border-right: 1px solid #e5e7eb;
+  border-right: 1px solid #a1a3ab;
   padding: 0.5rem;
 }
 
@@ -68,4 +68,8 @@ body {
 
 .rounded-table tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 0.5rem;
+}
+
+.heading {
+  border-bottom: 2px solid red;
 }
