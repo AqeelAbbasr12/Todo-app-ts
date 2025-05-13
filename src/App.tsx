@@ -18,23 +18,55 @@ const App = () => {
   return (
     <Routes>
       <Route element={<PublicLayout />}>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/register" element={<SignUp />} />
+        <Route
+          path="/"
+          element={<SignIn />}
+        />
+        <Route
+          path="/register"
+          element={<SignUp />}
+        />
       </Route>
 
-      <Route
-        element={<PrivateLayout />}>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/change-password" element={<ChangePassword />} />
-        <Route path="/account-information" element={<AccountInfo />} />
-        <Route path="/my-tasks" element={<MyTasks />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/vital-tasks" element={<VitalTasks />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/create-category" element={<CreateCategory />} />
+      <Route element={<PrivateLayout />}>
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
+        />
+        <Route
+          path="/change-password"
+          element={<ChangePassword />}
+        />
+        <Route
+          path="/account-information"
+          element={<AccountInfo />}
+        />
+        <Route
+          path="/my-tasks"
+          element={<MyTasks />}
+        />
+        <Route
+          path="/categories"
+          element={<Categories />}
+        />
+        <Route
+          path="/vital-tasks"
+          element={<VitalTasks />}
+        />
+        <Route
+          path="/settings"
+          element={<Settings />}
+        />
+        <Route
+          path="/help"
+          element={<Help />}
+        />
+        <Route
+          path="/create-category"
+          element={<CreateCategory />}
+        />
       </Route>
     </Routes>
   );
 };
-export default App
+export default App;

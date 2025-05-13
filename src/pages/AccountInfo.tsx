@@ -1,12 +1,13 @@
 import AccountInformation from "../components/AccountInformation";
 
 function AccountInfo() {
-  return <div className="dashboard">
-
-    <div className="">
-      <AccountInformation />
+  return (
+    <div className="dashboard">
+      <div className="">
+        <AccountInformation />
+      </div>
     </div>
-  </div>
+  );
 }
 
 export default AccountInfo;

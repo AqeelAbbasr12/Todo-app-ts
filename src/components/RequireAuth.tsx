@@ -10,7 +10,13 @@ const RequireAuth = ({ children }: RequireAuthProps) => {
   const isAuthenticated = !!localStorage.getItem("token"); // adjust to your logic
 
   if (!isAuthenticated) {
-    return <Navigate to="/" state={{ from: location }} replace />;
+    return (
+      <Navigate
+        to="/"
+        state={{ from: location }}
+        replace
+      />
+    );
   }
 
   return children;

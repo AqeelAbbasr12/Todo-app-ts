@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import uploadImg from "../assets/images/uoload-img.png"
+import uploadImg from "../assets/images/uoload-img.png";
 
 const FileUpload: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);

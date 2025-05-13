@@ -1,9 +1,11 @@
 import RegisterComponent from "../components/Register";
 
 function Register() {
-  return <>
-    <RegisterComponent />
-  </>
+  return (
+    <>
+      <RegisterComponent />
+    </>
+  );
 }
 
 export default Register;

@@ -22,9 +22,12 @@ body {
 }
 
 .dashboard .list-container {
-  box-shadow: 0px 121px 34px 0px rgba(0, 0, 0, 0),
-    0px 77px 31px 0px rgba(0, 0, 0, 0.01), 0px 44px 26px 0px rgba(0, 0, 0, 0.02),
-    0px 19px 19px 0px rgba(0, 0, 0, 0.03), 0px 5px 11px 0px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0px 121px 34px 0px rgba(0, 0, 0, 0),
+    0px 77px 31px 0px rgba(0, 0, 0, 0.01),
+    0px 44px 26px 0px rgba(0, 0, 0, 0.02),
+    0px 19px 19px 0px rgba(0, 0, 0, 0.03),
+    0px 5px 11px 0px rgba(0, 0, 0, 0.04);
 }
 
 .rounded-table {
