@@ -23,6 +23,23 @@ function RegisterComponent() {
   }>({});
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const errors = validateForm();
+    if (Object.keys(errors).length === 0) {
+      const formData = {
+        firstName,
+        lastName,
+        userName,
+        email,
+        password,
+        isAgree,
+      };
+      console.log(formData);
+
+      // navigate("/");
+      reset();
+    }
+  };
+  const validateForm = () => {
     const newErrors: {
       firstName?: string;
       lastName?: string;
@@ -74,27 +91,18 @@ function RegisterComponent() {
     }
 
     setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      const formData = {
-        firstName,
-        lastName,
-        userName,
-        email,
-        password,
-        isAgree,
-      };
-      console.log(formData);
-      setFirstName('');
-      setLastName('');
-      setUserName('');
-      setEmail('');
-      setPassword('');
-      setConfirmPassword('');
-      setIsAgree(false);
-      // navigate("/");
-    }
+    return newErrors;
   };
+  const reset = () => {
+    setFirstName('');
+    setLastName('');
+    setUserName('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setIsAgree(false);
+  };
+
   return (
     <div className="h-screen w-screen bg-[#FF6767] flex justify-center items-center">
       <div className="bg-white w-10/12 h-10/12 rounded-md py-6 overflow-auto">
